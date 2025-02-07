@@ -61,7 +61,11 @@ def pagina_chat():
     
     chain = st.session_state.get('chain')
     if chain is None:
-        st.error("Selecione o modelo")
+        st.markdown('''
+                    # Tem duas etapas no sidebar: 
+                    #### 1. na 1ª aba(modelos): inserir o token
+                    #### 2. na 2ª aba(Arquivos): Escolha o arquivo pdf e faça o upload p/ que o assistente irá te auxiliar
+                    ''')
         st.stop()
 
     memoria=st.session_state.get('memoria', MEMORIA)
