@@ -73,7 +73,7 @@ def pagina_chat():
         chat = st.chat_message(mensagem.type)
         chat.markdown(mensagem.content)
     
-    input_usuario = st.chat_input('Fale com deseja para o assistente')
+    input_usuario = st.chat_input('Fale o que deseja para o assistente')
     if input_usuario:
         #Humano
         chat = st.chat_message('human')
