@@ -87,7 +87,7 @@ def pagina_chat():
         st.session_state['memoria'] = memoria
     
 def sidebar():
-    st.image('nr12.icon')
+    #st.image('nr12.icon')
     tabs = st.tabs(['Seleção de Modelos','Upload de Arquivos'])
     
     with tabs[1]:
