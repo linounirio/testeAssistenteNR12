@@ -30,7 +30,7 @@ def carrega_arquivos(tipo_arquivo,arquivo):
 def carrega_modelo(provedor, modelo,api_key, tipo_arquivo, arquivo):
     documento = carrega_arquivos(tipo_arquivo=tipo_arquivo, arquivo=arquivo)
     
-    system_message='''Você é um assistente amigável chamado Orçamentista.
+    system_message='''Você é um assistente amigável especialista em documentação de projetos entre governo e o terceiro setor.
     Você possui acesso às seguintes informações vindas 
     de um documento {}: 
 
@@ -56,7 +56,7 @@ def carrega_modelo(provedor, modelo,api_key, tipo_arquivo, arquivo):
 
 def pagina_chat():
     col1,col2=st.columns([0.2,0.8])
-    col1.image('nr12.icon')
+    col1.image('acaocidada_icon.png')
     col2.header('Bem-vindo ao assistente',divider=True)  
     
     chain = st.session_state.get('chain')
@@ -87,7 +87,7 @@ def pagina_chat():
         st.session_state['memoria'] = memoria
     
 def sidebar():
-    #st.image('nr12.icon')
+    st.image('logo_azul_preto.jpeg')
     tabs = st.tabs(['Seleção de Modelos','Upload de Arquivos'])
     
     with tabs[1]:
